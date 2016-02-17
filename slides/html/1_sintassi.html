@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Corso PHP / 1 - Sintassi</title>
+	<title>PHP / 1 - Sintassi</title>
 
 	<meta name="description" content="Corso PHP / 1 - Sintassi">
 	<meta name="author" content="Nicholas - Makebit">
@@ -42,17 +42,6 @@
 		<!--[if lt IE 9]>
 		<script src="https://cdn.rawgit.com/hakimel/reveal.js/master/lib/js/html5shiv.js"></script>
 		<![endif]-->
-
-
-		<!-- html escaping -->
-		<script type="text/javascript">
-		function escapeHTML(s) { 
-			return s.replace(/&/g, '&amp;')
-			.replace(/"/g, '&quot;')
-			.replace(/</g, '&lt;')
-			.replace(/>/g, '&gt;');
-		}
-		</script>
 	</head>
 
 	<body>
@@ -61,10 +50,10 @@
 
 			<div class="slides">
 				<section>
-					<h1>Corso PHP</h1>
+					<h1>PHP</h1>
 					<h3>1 - Sintassi</h3>
 					<p>
-						<small>Da principiante ad avanzato</small>
+						<small>Da principiante ad esperto</small>
 					</p>
 					<p>
 						<small><a href="mailto:makebitcake@gmail.com">makebitcake@gmail.com</a></small>
@@ -77,12 +66,12 @@
 						<a href="#/2"><li>Cos'è un file php?</li></a>
 						<a href="#/3"><li>Come funziona</li></a>
 						<a href="#/4"><li>Sintassi base</li></a>
-						<a href="#/5"><li>Ambiente di sviluppo</li></a>
+						<a href="#/5"><li>Hello World!</li></a>
+						<a href="#/6"><li>Challenge</li></a>
 					</ol>
 				</section>
 
 				<section>
-					<section>
 						<h2>Cos'è un file php?</h2>
 						<ul>
 							<li>Ha estensione ".php"</li> 
@@ -93,18 +82,14 @@
   &lt;title&gt;Test PHP&lt;/title&gt;
  &lt;/head&gt;
  &lt;body&gt;
- &lt;p&gt;Hello World&lt;/p&gt;
+ &lt;?php echo &quot;Hello World!&lt;p&gt;&quot;; ?&gt;
  &lt;/body&gt;
-&lt;/html&gt;&lt;body&gt;
-&lt;p&gt;Hello World&lt;/p&gt;
-&lt;/body&gt;</code></pre>					
-					</section>
-
+&lt;/html&gt;</code></pre>					
 				</section>
 
 				<section>
 					<h2>Come funziona</h2>
-					<p><img class="fragment" src="img/how_it_works.gif" style="height:300px;"></p>
+					<img class="fragment" src="img/how_it_works.gif" style="height:300px;">
 					<ul>
 						<li class="fragment">
 							Il Client invia una richiesta al Web Server
@@ -122,33 +107,106 @@
 				</section>
 
 				<section data-transition="slide" data-background="#6082bb" data-background-transition="zoom">
-					<h2>PHP: Hypertext Preprocessor</h2>
-					<img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/PHP_Logo.png">
-					<ul>
-						<li class="fragment">
-							Nasce nel 1995
-						</li>
-						<li class="fragment">
-							Multipiattaforma
-						</li>
-						<li class="fragment">
-							Molte librerie
-						</li>
-						<li class="fragment">
-							Supporto MySQL, ecc
-						</li>
-					</ul>
+					<section>
+						<h2>Sintassi Base</h2>
+					</section>
+
+					<section>
+						<h2>Il codice da eseguire</h2>
+						<p>Uno script PHP inizia con <em>&lt;?php </em> e finisce con <em>?&gt;</em></p>
+						<pre><code class="php" data-trim>
+&lt;?php
+   //codice
+?&gt;
+						</code></pre>
+					</section>
+
+					<section>
+						<h2>Commenti</h2>
+						<p>Su singola linea o su più linee</p>
+						<pre><code class="php">
+// Un commento fornisce informazioni sul codice
+
+# Su una singola linea
+
+/*
+Oppure su più linee
+*/
+						</code></pre>
+					</section>
+
 				</section>
 
 				<section>
-					<h2>Ambiente di sviluppo</h2>
+					<h2>Hello World!</h2>
+					<p>Il primo script</p>
+					<pre><code data-trim>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Hello World!&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+    //Write out Hello World!
+    echo 'Hello World!';
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre></code>
+					<p>Il comando echo è usato per stampare del testo</p>
+				</section>
+
+				<section data-background="#cc6633">
 					<section>
-						Per iniziare a sviluppare...
+						<h2>Challenge</h2>
+						Scrivi qui sotto uno script PHP che
+						<ul>
+							<li>includa un commento su una linea e uno su più linee</li>
+							<li>stampi il tuo nome</li>
+						</ul>
+					<pre><code data-trim contenteditable>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Challenge&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre></code>
 					</section>
+
 					<section>
-						<h3><a target="new" href="http://www.wampserver.com/en/">Wamp Server</a></h3>
-						<h3><a target="new" href="https://www.sublimetext.com/">Sublime Text</a></h3>
-						<h3><a target="new" href="http://www.php.net/">www.php.net</a></h3>
+						<h2>Soluzione</h2>
+						Scrivi qui sotto uno script PHP che
+						<ul>
+							<li>includa un commento su una linea e uno su più linee</li>
+							<li>mostri il tuo nome</li>
+						</ul>
+					<pre><code data-trim>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Challenge&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+    // Un commento su una linea
+    echo 'Il tuo nome!';
+
+    /* 
+       Sfida facile?
+       Ci vediamo all prossima lezione!
+    */
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre></code>
 					</section>
 				</section>
 
