@@ -4,9 +4,9 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>Corso PHP / 0 - Introduzione</title>
+	<title>Corso PHP / 1 - Sintassi</title>
 
-	<meta name="description" content="Corso PHP / 0 - Introduzione">
+	<meta name="description" content="Corso PHP / 1 - Sintassi">
 	<meta name="author" content="Nicholas - Makebit">
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
@@ -42,6 +42,17 @@
 		<!--[if lt IE 9]>
 		<script src="https://cdn.rawgit.com/hakimel/reveal.js/master/lib/js/html5shiv.js"></script>
 		<![endif]-->
+
+
+		<!-- html escaping -->
+		<script type="text/javascript">
+		function escapeHTML(s) { 
+			return s.replace(/&/g, '&amp;')
+			.replace(/"/g, '&quot;')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;');
+		}
+		</script>
 	</head>
 
 	<body>
@@ -51,7 +62,7 @@
 			<div class="slides">
 				<section>
 					<h1>Corso PHP</h1>
-					<h3>0 - Introduzione</h3>
+					<h3>1 - Sintassi</h3>
 					<p>
 						<small>Da principiante ad avanzato</small>
 					</p>
@@ -63,58 +74,49 @@
 				<section>
 					<h2>Contenuto</h2>
 					<ol>
-						<a href="#/2"><li>Come è strutturato il corso</li></a>
-						<a href="#/3"><li>Perché imparare PHP</li></a>
-						<a href="#/4"><li>PHP: Hypertext Preprocessor</li></a>
+						<a href="#/2"><li>Cos'è un file php?</li></a>
+						<a href="#/3"><li>Come funziona</li></a>
+						<a href="#/4"><li>Sintassi base</li></a>
 						<a href="#/5"><li>Ambiente di sviluppo</li></a>
 					</ol>
 				</section>
 
 				<section>
 					<section>
-						<h2>Come è strutturato il corso</h2>
-						<p>Ogni lezione è composta da:</p>
-						<p>video, slides e quiz</p> 
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-
-					<section>
-						<h2>Slides</h2>
+						<h2>Cos'è un file php?</h2>
 						<ul>
-							<li>visibile da qualsiasi dispositivo</li> 
-							<li>disponibili in PDF</li>
-							<li>premi <em>Spazio</em> per visualizzare la prossima slide</li>
-							<li>premi <em>ESC</em> per visualizzare un'overview</li>
-							<li>premi <em>ALT</em> e clicca per uno zoom</li>
+							<li>Ha estensione ".php"</li> 
+							<li>Può contenere HTML, CSS, Javascript, ecc.</li>
 						</ul>
-					</section>
-
-					<section>
-						<h2>Dal livello principiante all'avanzato</h2>
-						<p>Non sei un programmatore? Nessun problema!</p>
+						<pre><code>&lt;html&gt;
+ &lt;head&gt;
+  &lt;title&gt;Test PHP&lt;/title&gt;
+ &lt;/head&gt;
+ &lt;body&gt;
+ &lt;p&gt;Hello World&lt;/p&gt;
+ &lt;/body&gt;
+&lt;/html&gt;&lt;body&gt;
+&lt;p&gt;Hello World&lt;/p&gt;
+&lt;/body&gt;</code></pre>					
 					</section>
 
 				</section>
 
-				<section data-transition="slide" data-background="#ff533c" data-background-transition="zoom">
-					<h2>Perché imparare PHP?</h2>
-					<img class="fragment" src="http://spectrum.ieee.org/img/top-tech-620px-1436797486093.jpg" style="height:250px;">
-					<p class="fragment"><small>spectrum.ieee.org</small></p>
+				<section>
+					<h2>Come funziona</h2>
+					<p><img class="fragment" src="img/how_it_works.gif" style="height:300px;"></p>
 					<ul>
 						<li class="fragment">
-							Linguaggio famoso e richiesto
+							Il Client invia una richiesta al Web Server
 						</li>
 						<li class="fragment">
-							Applicazioni web lato server
+							Il Web Server direziona la richiesta verso PHP
 						</li>
 						<li class="fragment">
-							Plugin Wordpress
+							PHP elabora la richiesta e produce una pagina html
 						</li>
 						<li class="fragment">
-							Script a riga di comando
+							Il Web Server restituisce la pagina all'utente
 						</li>
 					</ul>
 				</section>
