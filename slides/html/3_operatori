@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="it">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>PHP / 3 - Operatori</title>
+
+	<meta name="description" content="PHP / 3 - Operatori">
+	<meta name="author" content="Nicholas - Makebit">
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/reveal.css">
+	
+	<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/black.css" id="theme">
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/beige.css" id="theme">-->
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/blood.css" id="theme">-->
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/league.css" id="theme">-->
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/moon.css" id="theme">-->
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/night.css" id="theme">-->
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/serif.css" id="theme">-->
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/simple.css" id="theme">-->
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/solarized.css" id="theme">-->
+	<!--<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/css/theme/white.css" id="theme">-->
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="https://cdn.rawgit.com/hakimel/reveal.js/master/lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'https://cdn.rawgit.com/hakimel/reveal.js/master/css/print/pdf.css' : 'https://cdn.rawgit.com/hakimel/reveal.js/master/css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
+
+		<!--[if lt IE 9]>
+		<script src="https://cdn.rawgit.com/hakimel/reveal.js/master/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+					<h1>PHP</h1>
+					<h3>3 - Operatori</h3>
+					<p>
+						<small>Da principiante ad esperto</small>
+					</p>
+					<p>
+						<small><a href="mailto:makebitcake@gmail.com">makebitcake@gmail.com</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Contenuto</h2>
+					<ol>
+						<a href="#/2"><li>Operatori di assegnazione</li></a>
+						<a href="#/3"><li>Operatori di confronto</li></a>
+						<a href="#/4"><li>Operatori logici</li></a>						
+						<a href="#/5"><li>Creare una costante</li></a>
+						<a href="#/6"><li>Challenge</li></a>
+					</ol>
+				</section>
+
+				<section>
+						<h2>Operatori di assegnazione</h2>
+						<p class="fragment">Un'operazione di assegnazione è ad esempio <em>$x = $y</em>. Nella variabile <em>x</em> viene salvato il valore di <em>y</em></p>
+						<table class="fragment">
+						<thead>
+							<tr>
+								<th>Assegnazione</th>
+								<th>Forma breve</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>$x = $x + $y</td>
+								<td>$x += $y</td>
+							</tr>
+							<tr>
+								<td>$x = $x - $y</td>
+								<td>$x -= $y</td>
+							</tr>
+							<tr>
+								<td>$x = $x * $y</td>
+								<td>$x *= $y</td>
+							</tr>
+							<tr>
+								<td>$x = $x / $y</td>
+								<td>$x /= $y</td>
+							</tr>
+							<tr>
+								<td>$x = $x % $y</td>
+								<td>$x %= $y</td>
+							</tr>
+						</tbody>
+					</table>		
+				</section>
+
+				<section data-transition="slide" data-background="#4d004d" data-background-transition="zoom">
+					<section>
+						<h2>Operatori di confronto</h2>
+					<table class="fragment">
+						<thead>
+							<tr>
+								<th>Operatore</th>
+								<th>Nome</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>==</td>
+								<td>Uguale</td>
+							</tr>
+							<tr>
+								<td>!=</td>
+								<td>Diverso</td>
+							</tr>
+							<tr>
+								<td>></td>
+								<td>Maggiore</td>
+							</tr>
+							<tr>
+								<td>&lt;</td>
+								<td>Minore</td>
+							</tr>
+							<tr>
+								<td>>=</td>
+								<td>Maggiore o uguale</td>
+							</tr>
+							<tr>
+								<td>&lt;=</td>
+								<td>Minore o uguale</td>
+							</tr>
+						</tbody>
+					</table>
+					</section>
+
+					<section>
+						<h2>Condizioni</h2>
+						<p>Possiamo confrontare due numeri</p>
+						<pre><code class="php" data-trim>
+&lt;?php
+   $x = 5;
+   $y = 5;
+   $z = 10
+?&gt;							
+						</code></pre>
+						<ul>
+							<li class="fragment"><em>x</em> è uguale a <em>y</em>?<span class="fragment"> Si, <em>$x == $y</em> restituisce <span class="fragment highlight-green">vero</span></span></li>
+							<li class="fragment"><em>x</em> è uguale a <em>z</em>?<span class="fragment"> No, <em>$x == $z</em> restituisce <span class="fragment highlight-red">falso</span></span></li>
+							<li class="fragment"><em>x</em> è minore di <em>y</em>?<span class="fragment"> No, <em>$x &lt; $y</em> restituisce <span class="fragment highlight-red">falso</span></span></li>
+							<li class="fragment"><em>x</em> è maggiore o uguale a <em>y</em>?<span class="fragment"> Si, <em>$x >= $y</em> restituisce <span class="fragment highlight-green">vero</span></span></li>
+							<li class="fragment"><em>x</em> è diverso da <em>z</em>?<span class="fragment"> Si, <em>$x != $z</em> restituisce <span class="fragment highlight-green">vero</span></span></li>
+						</ul>
+					</section>
+
+					<section>
+						<h2>Condizioni</h2>
+						<p>Possiamo confrontare due stringhe</p>
+						<pre><code class="php" data-trim>
+&lt;?php
+   $x = "rosso";
+   $y = "rosso";
+   $z = "verde";
+?&gt;							
+						</code></pre>
+						<ul>
+							<li class="fragment"><em>x</em> è uguale a <em>y</em>?<span class="fragment"> Si, <em>$x == $y</em> restituisce <span class="fragment highlight-green">vero</span></span></li>
+							<li class="fragment"><em>x</em> è uguale a <em>z</em>?<span class="fragment"> No, <em>$x == $z</em> restituisce <span class="fragment highlight-red">falso</span></span></li>
+							<li class="fragment"><em>x</em> è maggiore di <em>y</em>?<span class="fragment"> No, <em>$x &lt; $y</em> restituisce <span class="fragment highlight-red">falso</span></span></li>
+							<li class="fragment"><em>x</em> è maggiore o uguale a <em>y</em>?<span class="fragment"> Si, <em>$x >= $y</em> restituisce <span class="fragment highlight-green">vero</span></span></li>
+							<li class="fragment"><em>x</em> è diverso da <em>z</em>?<span class="fragment"> Si, <em>$x != $z</em> restituisce <span class="fragment highlight-green">vero</span></span></li>
+							<li class="fragment"><span class="fragment highlight-blue"><em>x</em> è minore di <em>z</em>?</span><span class="fragment"> Si, <em>$x &lt; $z</em> restituisce <span class="fragment highlight-green">vero</span></span></li>
+						</ul>
+						<p class="fragment"><em>"rosso"</em> è alfabeticamente prima di <em>"verde"</em></p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Operatori Logici</h2>
+						<p>Permettono di concatenare più condizioni</p>
+						<table class="fragment">
+						<thead>
+							<tr>
+								<th>Operatore</th>
+								<th>Nome</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>&&</td>
+								<td>And</td>
+							</tr>
+							<tr class="fragment">
+								<td>||</td>
+								<td>Or</td>
+							</tr>
+							<tr class="fragment">
+								<td>!</td>
+								<td>Not</td>
+							</tr>
+						</tbody>
+					</table>
+					</section>
+
+					<section>
+						<h2>Esempio</h2>
+						<pre><code class="php" data-trim>
+&lt;?php
+   $x = 5;
+   $y = 5;
+   $z = 10
+?&gt;							
+						</code></pre>
+						<ul>
+							<li class="fragment"><em>x</em> è uguale a <em>y</em> <span style="color:orange;">e</span></strong> minore di <em>z</em>?<p class="fragment">Si, <em>($x == $y) && ($x < $z)</em> restituisce <span class="fragment highlight-green">vero</span></p></li>
+							<li class="fragment"><em>x</em> è uguale a <em>z</em> <span style="color:orange;">o</span> x è uguale a <em>y</em>?<p class="fragment"> Si, <em>($x == $z) || ($x == $y)</em> restituisce <span class="fragment highlight-green">vero</span></p></li>
+							<li class="fragment"><em>x</em> è minore o uguale di <em>y</em> <span style="color:orange;">e</span> <em>x</em> <span style="color:orange;">non</span> è uguale a <em>z</em>?<p class="fragment"> Si, <em>($x <= $y) && !($x == $z)</em> restituisce <span class="fragment highlight-green">vero</span></p></li>
+						</ul>
+						<p class="fragment">($x <= $y) && !($x == $z) <small>è uguale a</small> ($x <= $y) && ($x != $z) </p>
+					</section>
+				</section>
+
+				<section>
+						<h2>Costanti</h2>
+						<p class="fragment shrink">Una costante è un contenitore di informazioni</p>
+						<p class="fragment highlight-red">ma il suo valore non può essere cambiato una volta definito</p>	
+				</section>
+
+				<section data-transition="slide" data-background="#d9b3ff" data-background-transition="zoom">
+					<section>
+						<h2>Creare una costante</h2>
+					</section>
+
+					<section>
+						<h2>Creare una costante</h2>
+						<p>Si usa <em>define(nome variabile, valore)</em></p>
+						<pre><code class="php" data-trim>
+&lt;?php
+   define("GIORNI_SETTIMANA", 7);
+   define("MSG_BENVENUTO", "Benvenuto!");
+
+   echo MSG_BENVENUTO;
+   echo "In una settimana ci sono " . GIORNI_SETTIMANA;
+?&gt;
+						</code></pre>
+					</section>
+				</section>
+
+				<section data-background="#cc6633">
+					<section>
+						<h2>Challenge</h2>
+						Scrivi qui sotto uno script PHP che:
+						<ul>
+							<li>calcoli quante ore ci sono in un dato numero di anni</li>
+							<li>il numero di anni deve essere memorizzato in una variabile</li>
+						</ul>
+					<pre><code data-trim contenteditable>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Challenge&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre></code>
+					</section>
+
+					<section>
+						<h2>Soluzione</h2>
+					<pre><code data-trim>
+&lt;!DOCTYPE HTML&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;title&gt;Challenge&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;?php
+   // Costanti
+   define("ORE_GIORNO", 24);
+   define("GIORNI_ANNO", 365);
+   // Variabili
+   $anni = 3;
+   echo "In $anni anni ci sono " . $anni * ORE_GIORNO * GIORNI_ANNO . ' ore';
+?&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					</pre></code>
+					</section>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="https://cdn.rawgit.com/hakimel/reveal.js/master/lib/js/head.min.js"></script>
+		<script src="https://cdn.rawgit.com/hakimel/reveal.js/master/js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+				{ src: 'https://cdn.rawgit.com/hakimel/reveal.js/master/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'https://cdn.rawgit.com/hakimel/reveal.js/master/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'https://cdn.rawgit.com/hakimel/reveal.js/master/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'https://cdn.rawgit.com/hakimel/reveal.js/master/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'https://cdn.rawgit.com/hakimel/reveal.js/master/plugin/zoom-js/zoom.js', async: true },
+				{ src: 'https://cdn.rawgit.com/hakimel/reveal.js/master/plugin/notes/notes.js', async: true }
+				]
+			});
+
+</script>
+
+</body>
+</html>
